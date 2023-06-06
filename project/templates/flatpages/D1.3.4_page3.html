@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html>
+{% extends 'index.html' %}
 
-<head>
-    <title>{{ flatpage.title }}</title>
-</head>
+{% block title %}
+{{ flatpage.title }}
+{% endblock title %}
 
-<body>
-    {{ flatpage.content }}
-    {{ flatpage.content }}
-</body>
-
-</html>
+{% block content %}
+<h3 style="margin: 10px 30px;">{{ flatpage.title }}</h3>
+{{ flatpage.content }}
+<hr style="border: 2px solid blue;
+            width: 800px;
+            margin: 0 auto 0 0;">
+{{ flatpage.content }}
+{% endblock content %}

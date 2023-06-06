@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>{{ flatpage.title }}</title>
-</head>
-
-<body>
-    <h2>{{ flatpage.title }}</h2>
-    <hr>
-    <h3>Наши контакты:</h3>
-    {{ flatpage.content }}
-</body>
-
-</html>
+{% extends 'index.html' %}
+{% block title %} {% endblock title %}
+{% block content %}
+<h2 style="margin: 10px 30px;">{{ flatpage.title }}</h2>
+<hr>
+<h3 style="margin-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;">Наши контакты:</h3>
+{{ flatpage.content }}
+{% endblock content %}
